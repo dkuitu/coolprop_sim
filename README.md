@@ -51,7 +51,7 @@ This version currently displays data in Imperial units (PSIA, °F, BTU/lb) and i
     ```bash
     python main.py
     ```
-    *(If running the pre-refactoring `ph_simulator_v4_viz.py` directly, use `python ph_simulator_v4_viz.py`)*
+    *(If running the pre-refactoring `ph_simulator_v4.py` directly, use `python ph_simulator_v4.py`)*
 3.  Use the keyboard controls displayed in the info panel to adjust parameters and observe changes on the P-h diagram. Key controls include:
     *   **Arrow Keys:** Adjust P_evap and P_cond.
     *   **S/X, A/Z, E/D:** Adjust Superheat, Subcooling, Efficiency.
@@ -62,7 +62,7 @@ This version currently displays data in Imperial units (PSIA, °F, BTU/lb) and i
 
 ## Refactoring Plan
 
-This plan outlines steps to refactor the codebase (`ph_simulator_v4_viz.py` stage) for improved modularity, readability, and maintainability.
+This plan outlines steps to refactor the codebase (`ph_simulator_v4.py` stage) for improved modularity, readability, and maintainability.
 
 **Goals:**
 
@@ -92,7 +92,7 @@ This plan outlines steps to refactor the codebase (`ph_simulator_v4_viz.py` stag
     *   **Impact:** Other modules will import from `config`.
 
 4.  **Rename Main Files**
-    *   **Action:** Rename `ph_simulator_v4_viz.py` to `visualization_simulation.py` (containing `RefrigerationSimImperialViz`). Create `main.py` for the `App` class and entry point (`if __name__ == '__main__':`).
+    *   **Action:** Rename `ph_simulator_v4.py` to `visualization_simulation.py` (containing `RefrigerationSimImperialViz`). Create `main.py` for the `App` class and entry point (`if __name__ == '__main__':`).
     *   **Reasoning:** Separates the application runner from simulation logic.
     *   **Impact:** `main.py` becomes the executable script.
 
